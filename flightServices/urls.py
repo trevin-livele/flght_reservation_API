@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from flightApp import views
-from rest_framework import DefaultRouter
+from rest_framework import routers
 
 
-router = DefaultRouter()
+router = routers.DefaultRouter()
 
 router.register('flights',views.FlightViewSet)
 router.register('passengers',views.PassengerViewSet)

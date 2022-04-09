@@ -19,5 +19,5 @@ class Passenger(models.Model):
     phone = models.CharField(max_length=10)
 
 class Reservation(models.Model):
-    flight = models.OneToOneField(Flight,ondelete="models.CASCADE")
-    passenger = models.OneToOneField(Passenger,ondelete="models.CASCADE")
+    flight = models.OneToOneField(Flight,on_delete=models.CASCADE)
+    passenger = models.OneToOneField(Passenger,on_delete=models.CASCADE)
