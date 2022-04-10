@@ -19,7 +19,9 @@ from flightApp import views
 from rest_framework import routers
 
 
+# router = routers.DefaultRouter()
 router = routers.DefaultRouter()
+
 
 router.register('flights',views.FlightViewSet)
 router.register('passengers',views.PassengerViewSet)
