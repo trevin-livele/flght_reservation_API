@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from flightApp import views
 from rest_framework import routers
-
+from rest_framework.authtoken.views import obtain_auth_token
 
 # router = routers.DefaultRouter()
 router = routers.DefaultRouter()
@@ -35,4 +35,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('flightservices/', include(router.urls)),
     path('flightServices/findFlights/', views.find_flights),
+    path('api-token-auth/',obtain_auth_token,name="api_token_auth"),
 ]
